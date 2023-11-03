@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: younesazdevopsacraks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: younesazdevopsacraks
+  template:
+    metadata:
+      labels:
+        app: younesazdevopsacraks 
+    spec:
+      containers:
+        - name: younesazdevopsacraks 
+          image: testacraks29.azurecr.io/younesazdevopsacraks
+          ports:
+          - containerPort: 80
